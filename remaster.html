@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=chevron_right" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="remaster.css">
+    <link rel="stylesheet" href="remaster.js">
+    <title>Imptel</title>
+    
+</head>
+<header>
+    <div class="logo"><img src="imagens/cortada.png" alt=""></div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="logo"></div>
+    </div>
+    <nav>
+        <!--codigo do menu para desktop-->
+        <ul class="desktop">
+    
+           <li class="hideOnMobile"> <a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\Home\remaster.html" class="active"> Home</a></li>
+           <li class="hideOnMobile"> <a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\Notícias\noticias.html" >Notícias</a>
+            <li class="hideOnMobile"> <a href="#" >Sobre</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\Sobre\Eventos\Eventos.html">Eventos</a></li>
+                        <li><a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\Sobre\História\historia.html">História</a></li>
+                        <li><a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\Sobre\instalações\instal.html">Instalações</a></li>
+                        <li><a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\Sobre\Professores\professores.html">Professores</a></li>
+                      
+                    </ul>
+                </div>
+            </li>
+                        <li class="hideOnMobile"><a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\Comunicados\anuncios.html"> Comunicados</a></li>
+                            <li class="hideOnMobile"><a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\Secretaria\secretaria.html">Secretaria Online</a></li>
+                                <li class="hideOnMobile"><a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\Aluno\aluno.html">Aluno</a></li>
+                                    <li class="hideOnMobile"><a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\cursos\cursos.html">Cursos</a></li>
+                                        
+                                    </ul>
+                                    <ul class="hide">
+                                    <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                                        
+                                    </ul>
+    </nav>
+    
+    <!--codigo da sidebar mobile-->
+    
+    <ul class="sidebar">
+        <li onclick= hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\Home\remaster.html">Home</a></li>
+        <li><a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\Notícias\noticias.html">Notícias</a></li>
+
+        <li><button onclick="toggleDropdown()"><a href="#/, ">Sobre ▼</a></button>
+            <div class="dropdown">
+            <div class="sub-menu" id="dropdownMenu">
+                <ul>
+                    <li><a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\Sobre\Eventos\Eventos.html">Eventos</a></li>
+                    <li><a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\Sobre\História\historia.html">História</a></li>
+                    <li><a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\Sobre\instalações\instalac.html">Instalações</a></li>
+                    <li><a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\Sobre\Professores\professores.html">Professores</a></li>
+                                  </ul>
+            </div>
+        </div>
+        <li><a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\Secretaria\secretaria.html">Secretaria Online</a></li>
+        <li><a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\Aluno\aluno.html">Aluno</a></li>
+        <li><a href="C:\Users\tiag3\OneDrive\Desktop\project remasterizado\cursos\cursos.html">Cursos</a></li>
+       </ul>    
+</header>
+
+<!--codigo em script do botão do menu da sidebar-->
+
+<script>function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display= 'flex'
+const imagem =document.querySelector('.sidebar')
+}
+function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display= 'none'
+}
+//codigo em script do sobre e o seu dropdown
+
+function toggleDropdown() {
+            const dropdown = document.getElementById('dropdownMenu');
+            const isVisible = dropdown.style.display === 'block';
+            dropdown.style.display = isVisible ? 'none' : 'block';
+        }
+
+        // Opcional: Fecha o dropdown se o usuário clicar fora dele
+        window.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('dropdownMenu');
+            const button = event.target.closest('button');
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.style.display = 'none';
+            }
+        });
+</script>
+
+<!-- fim menu -->
+
+ 
+
+<!--CODIGO PARA UMA PAGINA SÓ (portifólio)
+
+<section id="home">home</section>
+<section id="sobre">sobre</section>
+<section id="anuncios">anuncios</section>
+<section id="secretaria Online">Secretaria Online</section>
+<section id="aluno">aluno</section>
+<section id="cursos">cursos</section>
+<section id="login">login</section>
+-->
+
+
+<body>
+
+<!--
+    <div class="navlocal">
+        
+        <ul><li><a href="">Como faço a inscrição?</a></li>
+            <li><a href="">Como faço a inscrição?</a></li>
+            <li><a href="">Como faço a inscrição?</a></li>
+        </ul>
+        </div>
+        -->
+
+
+      <!--inicio do slide da pagina-->
+
+
+      <div class="slideshow-container">
+        <div class="slide active">
+            <img src="imagens/quem somosn.png" alt="Imagem 1">
+            <div class="text-overlay">Conheça o IMPTEL </div>
+            <div class="descric">A melhor escolha para a formação do seu filho.</div>
+            <div class="button-container">
+               <a href="C:\Users\Tiago da Silva\OneDrive\Desktop\project remasterizado\Sobre\História\historia.html"> <button class="btn">Ver Mais</button></a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="imagens/instcamama.jpg" alt="Imagem 2">
+            <div class="text-overlay">As nossas instalações</div>
+            <div class="descric"></div>
+            <div class="button-container">
+               <a href="C:\Users\Tiago da Silva\OneDrive\Desktop\project remasterizado\Sobre\instalações\instal.html"> <button class="btn">Ver Mais</button></a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="imagens/cursoss.png" alt="Imagem 3">
+            <div class="text-overlay">Os nossos cursos</div>
+            <div class="descric"></div>
+            <div class="button-container">
+                <a href=""><button class="btn">Ver Mais</button></a>
+            </div>
+        </div>
+        <div class="arrow left" onclick="previousSlide()">&#10094;</div>
+        <div class="arrow right" onclick="nextSlide()">&#10095;</div>
+    </div>
+    
+    
+            
+        </div>
+    </div>
+
+    <!--inicio dos cards de noticias-->
+
+
+    <div class="intro-card">
+        <h1> Notícias</h1>
+    </div>
+    
+    <main class="news-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="imagens/IMG-20241129-WA0077.jpg" alt="Imagem da notícia" class="card-image">
+            <div class="card-content">
+                <h2>Em primeiro lugar na programação!</h2>
+                <p>Alunos do  instituto medio privado de tecnologias (IMPTEL) do camama participam e vencem concurso de programação realizado no instituto de telecomunicações (ITEL). Clique para saber mais detalhes.</p>
+                <button class="btn">Ver Mais</button>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="imagens/feiraemr.jpg" alt="Imagem da notícia" class="card-image">
+            <div class="card-content">
+                <h2>Feira de Empreendedorismo no IMPTEL!</h2>
+                <p>Venha participar da Feira de Empreendedorismo organizada pelo Instituto Médio Privado de Tecnologias - IMPTEL. Clique para saber mais detalhes.</p>
+                <button class="btn">Ver Mais</button>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="imagens/img_2_1731529293594.jpg" alt="Imagem da notícia" class="card-image">
+            <div class="card-content">
+                <h2>Defesa de Final de Curso no IMPTEL</h2>
+                <p> O Instituto Médio Privado de Tecnologias - IMPTEL convida você para a Defesa de Final de Curso, onde nossos estudantes apresentarão seus projetos finais e conquistas acadêmicas. Clique para saber mais detalhes.</p>
+                <button class="btn">Ver Mais</button>
+            </div>
+        </div>
+    </main>
+
+
+        <!--inicio dos cards de eventos-->
+
+
+        <div class="eventos">
+            <h1>Os nossos eventos!</h1> 
+        </div>
+        <div class="container">
+            <div class="destaque">
+                <img src="imagens/copiaempreen.jpg" alt="imagem 1">
+                <div class="news-content">
+                    <h3> Feira de Empreendedorismo</h3>
+                    <p>O Instituto Médio Privado de Tecnologias (IMPTEL) tem o prazer de convidá-lo para a Feira de Empreendedorismo! Venha explorar ideias inovadoras, conectar-se com mentes criativas e descobrir soluções que transformarão o futuro.</p>
+                    <button onclick="window.location.href='noticia1.html'">Ver mais</button>
+                </div>
+            </div>
+
+            <!--card 2-->
+            <div class="secundarios">
+    
+            <div class="news-item" id="2">
+                <img src="imagens/desportos.jpg" alt="imagem 2">
+                <div class="news-content">
+                    <h3>Campeonato de Futsal Interclasse IMPTEL 2025!!!</h3>
+                    <p>Prepare sua turma e venha mostrar quem manda dentro de campo!fvfbfbfbbfb fg dfryu.</p>
+                    <button onclick="window.location.href='noticia2.html'">Ver mais</button>
+                </div>
+            </div>
+
+
+    <!--card 3-->
+            <div class="news-item" id="3">
+                <img src="imagens/imagem do avanço.jpg" alt="imagem 3">
+                <div class="news-content">
+                    <h3>Título da Notícia 3</h3>
+                    <p>Resumo da notícia 3, com informações relevantes e um breve descritivo para atrair o leitor.</p>
+                    <button onclick="window.location.href='noticia3.html'">Ver mais</button>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="remaster.js"></script>
+        </div>
+        <!--
+        <div class="sabias_que">
+           <h1>Sabias que...</h1>
+           <p>...as nossas instituições têm um módulo académico único em que o estudante aprende "fazendo"?</p>
+           <h2>Como funciona a aprendizagem experiencial?</h2>
+           <p>O estudante começa por ter uma <strong>experiência (prática)</strong> para depois refletir sobre a mesma; depois chega a fase da <strong>conceptualização</strong>, em que o estudante <strong>formula uma teoria</strong>, e finalmente a aplicação das aprendizagens feitas através de trabalho autónomo e com conhecimento. </p>
+           <h2>Quais são as vantagens do modelo</h2>
+
+        </div>
+       
+        
+    <div class="slide-content">
+        <div class="card-wrapper">
+            <div class="card">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="imagens/engenira de telecom certo.jpg" alt="" class="card-img">
+                    </div>
+                </div>
+                <div class="card-content">
+                     <h2 class="name">FEIRA DE EMPREENDEDOISMO</h2>
+                     <p class="description"></p>
+
+                     <button class="button">ver mais</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-content">
+        <div class="card-wrapper">
+            <div class="card">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <img src="images/copiiaa.jpg" alt="" class="card-img">
+                    </div>
+                </div>
+                <div class="card-content">
+                     <h2 class="name">FEIRA TECNOLOGICA</h2>
+                     <p class="description"> </p>
+
+                     <button class="button">ver mais</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slide-content">
+        <div class="card-wrapper">
+            <div class="card">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="images/img_2_1731529293594.jpg" alt="" class="card-img">
+                    </div>
+                </div>
+                <div class="card-content">
+                     <h2 class="name">PROJETO ANUAL</h2>
+                     <p class="description"></p>
+
+                     <button class="button">ver mais</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slide-content">
+        <div class="card-wrapper">
+            <div class="card">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="images/desportos.jpg" alt="" class="card-img">
+                    </div>
+                </div>
+                <div class="card-content">
+                     <h2 class="name">DESPORTO</h2>
+                     <p class="description"></p>
+
+
+                     <button class="button">ver mais</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="final_card"> "Nenhum obstáculo é tão grande se a sua vontade de vencer for maior!!!"</div>
+-->
+    <!--
+    opção 1
+    <div class="cont_qs">
+
+      <div class="img_qs">
+        <img src="images/quem somos 2.jpg" alt="">
+      </div>  
+      <div class="text_qs">
+        <h3 class="qs">Quem somos?</h3>
+          <p> Um <strong>Instituto Médio de Tecnologias de Luanda</strong> criado para ajudar na formação de quadros em Angola.
+           O IMPTEL nº 8028, a sua organização e funcionamento é regido pela Lei de Base do Subsistema de Educação e Ensino de Angola.
+           Situado nos Municípios de Viana e Belas , tem 15 salas de aulas, 16 turmas, com uma média de 35 alunos por sala e com a capacidade de albergar aproximadamente <strong>220  alunos</strong>.</p>
+      </div>
+    </div>
+    -->
+      <!--
+      <div class="fundador">
+      <h3 class="fund">Nosso Fundador</h3>
+      <div class="imagem_do_Fundador">
+          <img src="../img/Igreja.jpeg" alt="Mário de Oliveira Igreja">
+      </div>
+
+      <div class="text_fundador">
+          <p>
+              Nascido em  (em Angola) à 6 de Agosto de 1975. Mário André de Oliveira Igreja . É o <strong> CEO do Imptel-Ceptel Angola</strong> <strong> CEO do Imptel-Ceptel Angola</strong>
+               CEO do Imptel-Ceptel Angola<strong>Técnico superior de Sistemas Informáticos </strong> Chef de secção de departamento de IT.
+              O Imptel, comemora calorosamente todos os anos o aniversário do seu nascimento com a finalidade de honrar o seu nome e esforço que depositou na sua vocação enquanto vivo.</p>
+      </div>
+    </div>
+</div>
+      conteudo base da pagina (fim)-->
+
+    
+     
+    
+  
+</body>
+
+    
+
+<footer>
+    <div class="footer-col">
+        <h4>INSTALAÇÕES</h4>
+        <ul>
+            <h5>IMPTEL I - Camama | IMPTEL II - Vila de Viana</h5>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>INFORMAÇÕES</h4>
+        <ul>
+        
+            <h5>-Escola Secundária</h5>
+            <h5>943 529 061</h5>
+            <h5>imptel.angola@gmail.com</h5>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>HORÁRIO</h4>
+        <ul>
+        
+            <h5>Segunda á Sexta  
+                07:00 - 16:00</h5>
+                
+    
+            
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>REDES SOCIAIS</h4>
+        <div class="links">
+            <div class="facebook"><a href="https://www.facebook.com/profile.php?id=100057469868635"><i class= "fab fa-facebook-f"></i></a></div>
+           <div class="whatsapp"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwa.me%2F244923393211%3Ffbclid%3DIwAR0PukjoJDxBj_6HHEWYXVgXiZQRuTPDNDyxwgroBjfSdJke4a9HlwQjf-c_aem_AcufdJuepDcjxvZH1ZkyA9Z0p7YrENCTgkqxVBvz7uaWWwW6aSSckX5f4026J-htp_zSO7l71Wi6x8WhqxSYqqSa&h=AT111-OHNBzDa7Is0uz5xrg6wLa3xbsSTYfpoGh9yBpZugmATfGeUWh8i60xjx8U1VMvA5zkoSEVWjB0iQ2oxwLUJXVfjGx7_TmZS9xVZMeTphA1YTyOQf_fJwWaZ8_ZyNqn"><i class= "fab fa-whatsapp "></i></a></div>
+        </div>
+       
+    </div>
+
+</footer>
+</html>
